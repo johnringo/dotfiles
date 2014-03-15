@@ -8,7 +8,9 @@ alias ll='ls -al'
 
 export TERM=xterm-256color
 export PATH=$HOME/bin:$PATH
+export DOTFILES_REPO=$HOME/.dotfiles
 
+[ -f $DOTFILES_REPO/maven/colorize ] && source $DOTFILES_REPO/maven/colorize
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
