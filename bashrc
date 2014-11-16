@@ -5,6 +5,7 @@ export PS1="\[\033]0;\h \w \$(parse_git_branch) \007\][\[\033[01;35m\]\h \[\033[
 
 alias ls='ls -G'
 alias ll='ls -al'
+alias cdboxen='cd /opt/boxen/repo'
 
 export JAVA_HOME=`/usr/libexec/java_home`
 export TERM=xterm-256color
