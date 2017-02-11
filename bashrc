@@ -15,6 +15,5 @@ export DOTFILES_REPO=$HOME/.dotfiles
 [ -f $DOTFILES_REPO/maven/colorize ] && source $DOTFILES_REPO/maven/colorize
 
 if [ -d `brew --prefix`/etc/bash_completion.d ]; then
-    echo "Sourcing bash-completion files"
     . `brew --prefix`/etc/bash_completion.d/**
 fi
