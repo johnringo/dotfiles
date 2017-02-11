@@ -1,6 +1,7 @@
 
 # Inspired by https://github.com/lapwinglabs/blog/blob/master/hacker-guide-to-setting-up-your-mac.md
 
+echo ""
 echo "Setting up dotfiles..."
 ln -v -s ~/.dotfiles/bashrc ~/.bashrc
 ln -v -s ~/.dotfiles/git/gitconfig ~/.gitconfig
@@ -13,9 +14,11 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+echo ""
 echo "Updating homebrew recipes..."
 brew update
 
+echo ""
 echo "Installing packages.."
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
@@ -40,7 +43,7 @@ binaries=(
   hub
   git
 )
-
+echo ""
 echo "Installing binaries..."
 brew install ${binaries[@]}
 
@@ -67,18 +70,16 @@ apps=(
   qlmarkdown
   qlstephen
   intellij-idea
+  android-studio
   iterm2
 )
 
 # Check if apps have been installed.
-if [ ! -f .apps-installed ]; then
-  echo "Installing apps.."
-  brew cask install --appdir="/Applications" ${apps[@]}
-  touch .apps-installed
-else
-  echo "Already installed apps. Skipping..."
-fi
+echo ""
+echo "Installing apps.."
+brew cask install --appdir="/Applications" ${apps[@]}
 
+echo ""
 echo "Applying macOS settings..."
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
@@ -180,6 +181,8 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 for app in "Finder" "Mail" "Photos" "Safari" "SystemUIServer" "cfprefsd"; do
 	killall "${app}" &> /dev/null
 done
+
+echo ""
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
 exit 0
