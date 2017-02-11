@@ -2,12 +2,6 @@
 	name = John Ringø
 	email = john@ringo.io
 
-[credential]
-	helper = /opt/boxen/bin/boxen-git-credential
-
-[core]
-	excludesfile = /opt/boxen/config/git/gitignore
-
 [hub]
 	protocol = https
 
