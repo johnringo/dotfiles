@@ -8,11 +8,13 @@ alias ll='ls -al'
 
 export JAVA_HOME=`/usr/libexec/java_home`
 export TERM=xterm-256color
-export PATH=$HOME/bin:$PATH
+# Add Homebrew bin folder to PATH
+export PATH="/usr/local/bin:$PATH"
 export DOTFILES_REPO=$HOME/.dotfiles
 
 [ -f $DOTFILES_REPO/maven/colorize ] && source $DOTFILES_REPO/maven/colorize
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+if [ -d `brew --prefix`/etc/bash_completion.d ]; then
+    echo "Sourcing bash-completion files"
+    . `brew --prefix`/etc/bash_completion.d/**
 fi
