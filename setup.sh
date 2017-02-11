@@ -1,3 +1,6 @@
+
+# Inspired by https://github.com/lapwinglabs/blog/blob/master/hacker-guide-to-setting-up-your-mac.md
+
 echo "Setting up dotfiles..."
 ln -v -s ~/.dotfiles/bashrc ~/.bashrc
 ln -v -s ~/.dotfiles/git/gitconfig ~/.gitconfig
@@ -77,6 +80,7 @@ else
 fi
 
 echo "Applying macOS settings..."
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
