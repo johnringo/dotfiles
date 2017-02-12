@@ -161,6 +161,11 @@ defaults write com.apple.Safari AutoFillPasswords -bool false
 defaults write com.apple.Safari AutoFillCreditCardData -bool false
 defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 
+# Disable continuous spellchecking
+defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool false
+# Disable auto-correct
+defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
+
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
