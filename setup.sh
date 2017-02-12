@@ -58,6 +58,7 @@ brew cleanup
 apps=(
   alfred
   dropbox
+  jotta
   google-chrome
   firefox
   spotify
