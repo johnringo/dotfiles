@@ -57,22 +57,23 @@ brew cleanup
 
 apps=(
   alfred
-  dropbox
-  jotta
-  google-chrome
-  firefox
-  spotify
-  java
-  sublime-text
+  android-studio
   atom
-  vlc
-  slack
-  quicklook-json
+  dropbox
+  firefox
+  google-chrome
+  intellij-idea
+  iterm2
+  java
+  jotta
   qlmarkdown
   qlstephen
-  intellij-idea
-  android-studio
-  iterm2
+  quicklook-json
+  slack
+  spideroakone
+  spotify
+  sublime-text
+  vlc
 )
 
 # Check if apps have been installed.
