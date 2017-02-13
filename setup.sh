@@ -66,6 +66,7 @@ apps=(
   iterm2
   java
   jotta
+  keka
   qlmarkdown
   qlstephen
   quicklook-json
